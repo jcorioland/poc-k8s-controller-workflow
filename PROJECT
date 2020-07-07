@@ -1,3 +1,10 @@
 domain: poc-simulation-workflow.io
 repo: poc-simulation-workflow.io
+resources:
+- group: simulationworkflow
+  kind: Simulation
+  version: v1alpha1
+- group: simulationworkflow
+  kind: BuildingBlock
+  version: v1alpha1
 version: "2"

@@ -1,0 +1,20 @@
+# permissions for end users to view buildingblocks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: buildingblock-viewer-role
+rules:
+- apiGroups:
+  - simulationworkflow.poc-simulation-workflow.io
+  resources:
+  - buildingblocks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - simulationworkflow.poc-simulation-workflow.io
+  resources:
+  - buildingblocks/status
+  verbs:
+  - get

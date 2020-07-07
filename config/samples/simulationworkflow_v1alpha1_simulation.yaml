@@ -1,0 +1,19 @@
+apiVersion: simulationworkflow.poc-simulation-workflow.io/v1alpha1
+kind: Simulation
+metadata:
+  name: usimtest
+  namespace: default
+spec:
+  owner: "Julien Corioland"
+  command: "echo 'wget -O- http://vtd:80'"
+  entryPoint: "fep"
+  buildingBlocks:
+    - name: "fep"
+      dockerImage: "nginx"
+      dockerTag: "latest"
+    - name: "vtd"
+      dockerImage: "nginx"
+      dockerTag: "latest"
+    - name: "tpt"
+      dockerImage: "nginx"
+      dockerTag: "latest"
